@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const puerto = 5000;
+const puerto = process.env.PORT;
 
 // motor de plantillas 
 app.set('view engine', 'ejs');
-app.set('views',__dirname+'/views')
-app.use(express.static(__dirname + "/public"))
+app.set('views','/app/views')
+app.use(express.static("/app/public"))
 // atencion de la solicitud
 app.get('/',(req,res)=>{
     res.render("index",{variable:"titulo dinamico variable desde el servidor"
@@ -16,3 +16,4 @@ app.get('/',(req,res)=>{
 app.listen(puerto,()=>{
     console.log("Ejecutando el servidor")
 })
+
