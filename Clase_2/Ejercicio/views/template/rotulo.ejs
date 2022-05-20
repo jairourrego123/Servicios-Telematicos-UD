@@ -2,30 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <!--Lllamado a la hoja de estilos-->
     <link rel="stylesheet" href="./css/bootstrap.css">
     
     <title>EJERCICIO1</title>
 </head>
+<script>
+    function escribir(a){
+        
+    a=a.split(',')
+    document.getElementById('cont1').innerHTML=a[0];
+    document.getElementById('cont2').innerHTML=a[1];
+     
+    var image=document.getElementById("foto")
+    image.src  = "/imagenes/"+a[2];
+    image.height="200" 
+    image.width="500"
+   
+    }
+    </script>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="http://localhost:5000/">Catalogo</a>
+        <a class="btn btn-outline-primary" href="https://inventario-telematica.herokuapp.com/">Catalogo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           
             <span class="navbar-toggler-icon"></span>
         </button>
+        <% for (var i =0; i < producto.length;  i++ ) { 
+           
+            
+           
+             %>
+             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                 
+                 <li class="nav-item active">
+                   <a class="nav-link" href="javascript:escribir('<%=producto[i]%>');">  <%=producto[i][0]%></a>
+                 </li>
+              
+               </ul>
+              
+               
+               
+             <% } %>
 
        
         
       </nav> 
       
-      <script>
-        function escribir(a){
-       
-        document.getElementById('cont1').innerHTML=a[1].nombre
-        }
-        </script>
+     
 </body>
 </html>

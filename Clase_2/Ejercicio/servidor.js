@@ -2,29 +2,53 @@
 
 const express = require("express");
 const app = express();
-const puerto = 5000;
+const puerto = process.env.PORT;
+const multer = require('multer')
+
 
 const { urlencoded } = require("express");
 app.use(urlencoded({extended:false}))
 // motor de plantillas 
 app.set('view engine', 'ejs');
 app.set('views',__dirname+'/views')
-app.use(express.static(__dirname + "/public"))
+app.use(express.static(__dirname+"/public"))
+
+
+const storage = multer.diskStorage({
+    
+    destination:__dirname+ '/views/imagenes',
+    filename: (req,file,cb)=>{
+        cb(null,file.originalname)
+    }
+})
+
+
+
+app.use(multer({
+    storage:storage,
+    dest: __dirname+'/views/imagenes'
+}).single('imagen'))
+
+
+app.use(express.static(__dirname+'/views'))
+
 
 var producto = []
 contador=-1
 // atencion de la solicitud
 app.get('/',(req,res)=>{
-    res.render("index")
-    console.log("HOME")
+    res.render("index",{producto:producto})
+    
 });
 
 app.post('/',(req,res)=>{
+
+    
     contador++
     producto[contador]=[
                         req.body.nombre,
                         req.body.descripcion,
-                        req.body.imagen]
+                        req.file.originalname]
     
     res.render("index", {
 
@@ -32,6 +56,7 @@ app.post('/',(req,res)=>{
     } )
     
     console.log(producto)
+    console.log(req.file)
     
 });
 
