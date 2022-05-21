@@ -1,0 +1,36 @@
+<%- include("rotulo")%>
+
+<div class="container2">
+    <script>
+        function consultar(){
+            var td = document.getElementById("tabProd").rows[0].cells[3]; //Primero seleccionar el <td>
+        }
+    </script>
+<% for (var i =0; i < producto.length;  i++ ) { 
+           
+            
+    
+    %>
+    <button class="btn btn-outline-dark border" onclick="consultar()">
+    <div class="container" >
+      
+        
+        <h1><%=producto[i][0]%></h1> 
+        <img src="../imagenes/<%=producto[i][4]%>"  id="foto">
+        <p><%=producto[i][1]%></p>
+        <h6>$<%=producto[i][3]%></h6>
+   
+       <h1 class="cont1"></h1>
+   
+
+     </div>
+     </button>
+      
+    <% } %>
+
+</div>
+
+
+<script>
+    
+    </script>

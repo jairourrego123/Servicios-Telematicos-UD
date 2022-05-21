@@ -1,0 +1,31 @@
+<%- include("rotulo")%>
+<body>
+
+<div class="container3">
+  <div style="text-align: center; padding:1%; " class="container-fluid">
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="POST-name">Nombre:</label>
+        <input id="Nombre" type="text" name="nombre" Required class="form-control">
+        <label for="escripcion">Descripcion:</label>
+        <input id="Descripcion" type="text" name="descripcion" Required class="form-control">
+        <label for="Catidad">Cantidad</label>
+        <input id="Cantidad" type="number" name="cantidad" required class="form-control">
+        <label for="Catidad">Precio</label>
+        <input id="Precio" type="number" name="precio" required class="form-control">
+        <label for="Imagen">Imagen:</label>
+        <input id="Imagen" type="file" name="imagen" required class="form-control">
+     
+        <div style="text-align: center; padding-top:15%; " class="form-control-file" >
+        <input type="submit" value="Nuevo Insumo" class="btn btn-outline-dark">
+    
+      </form>
+    
+
+      
+       
+      </div>
+
+</div>
+    
+</body>
+</html>

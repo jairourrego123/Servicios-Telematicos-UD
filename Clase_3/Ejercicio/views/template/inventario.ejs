@@ -1,0 +1,48 @@
+<%- include("rotulo")%>
+
+
+    <h1 style="text-align: center; margin: 10px; ">INVENTARIO</h1>
+    
+    
+    <table class="table table-striped " id="tabla">
+        <caption >Inventario de productos Jairo Urrego & Felipe Villamizar</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+        
+    <% for (var i =0; i < producto.length;  i++ ) { 
+            
+            
+
+        %>
+        
+        
+            
+           
+            <tr>
+                <th scope="row"><%=i%></th>
+                <td><%=producto[i][0]%></td>
+                <td><%=producto[i][1]%></td>
+                
+                <td><%=producto[i][0]%></td>
+                <td><%=producto[i][1]%></td>
+              </tr>
+        
+            
+        
+
+            
+          
+            
+        <% } %>
+            
+          
+        </tbody>
+      </table>
