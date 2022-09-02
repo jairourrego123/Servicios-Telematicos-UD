@@ -9,7 +9,7 @@ const multer = require('multer')
 const { urlencoded } = require("express");
 app.use(urlencoded({extended:false}))
 // motor de plantillas 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');  
 app.set('views',__dirname+'/views')
 app.use(express.static(__dirname+"/public"))
 
