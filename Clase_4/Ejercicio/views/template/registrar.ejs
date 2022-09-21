@@ -1,0 +1,27 @@
+<%- include("rotulo")%>
+<ul >
+    
+    <li ><a href="/">Salir</a></li>
+        
+</ul>
+<div id="principal2">
+<div style="text-align: center; padding:1%; " class="container-fluid" id="princiapl">
+    <form action="/registrar" method="post" >
+        <label for="POST-name">Usuario:</label>
+        <input id="usuario" type="text" name="usuario" Required class="form-control">
+        <label for="">Clave</label>
+        <input id="clave" type="password" name="clave" Required class="form-control">
+        <label for="">Accesos</label><br>
+        <label><input type="checkbox" name="habitacion" value=true> Habitacion principal</label><br>
+        <label><input type="checkbox" name="cocina" value=true> Cocina</label><br>
+        <label><input type="checkbox" name="garaje" value=true> Garaje    </label><br>
+        <label><input type="checkbox" name="banio" value=true> Baño</label><br>
+        <label><input type="checkbox" name="patio" value=true> Patio</label><br>
+
+        
+        </div>
+        <div style="text-align: center; padding:1%;  " class="form-control-file" >
+        <input type="submit" value="Guardar" class="btn btn-outline-success" style="width: 35%;"  >
+      </div>
+    </div>
+      </form>

@@ -1,0 +1,14 @@
+body{
+    margin: 20%;
+    background-color: black;
+    display: flexbox;
+    
+}
+canvas{
+    width: 720px;
+    
+    height: 500px;
+    display: flex;
+}
+
+button

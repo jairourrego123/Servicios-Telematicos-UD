@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./css/bootstrap.css">
     
-    
+    <script>
+        function consultar(a,b){
+            
+         
+            var valor = prompt("Cuantos vas a comprar", "");
+            console.log(valor)
+            var comprar= document.getElementById("comprar");
+            var posiciona = document.getElementById("valor1");
+            var posicionb = document.getElementById("valor2");
+            b=b-valor
+            posiciona.value=a
+            posicionb.value=b
+            comprar.submit()
+
+
+            }
+        </script>
+
     <!--Lllamado a la hoja de estilos-->
     <link rel="stylesheet" href="/main.css">
-    
+  
     <title>EJERCICIO1</title>
 </head>
 <ul>
@@ -17,22 +34,26 @@
     <li><a href="/inventario">Inventario</a></li>
     <li><a href="/insumos">Nuevos Insumos</a></li>
 
+
+
     
 </ul>
-<script>
-   
-</script>
+
+
 
 <body>
+
+    <form action="/comprar" method=post id="comprar">
+        <input type="hidden" name="a" value="" id="valor1">
+        <input type="hidden" name="b" value="" id="valor2">
+    
+        
+        </form>
   
- <div>
-
-
-
- </div>   
+   
         
   
-
+ 
 </body>
 
 </html>

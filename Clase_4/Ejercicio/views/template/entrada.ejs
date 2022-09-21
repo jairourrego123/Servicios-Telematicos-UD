@@ -1,0 +1,33 @@
+<%- include("rotulo")%>
+<ul >
+    <li ><a href="/registrar">Registrar</a></li>
+    <li ><a href="/">Salir</a></li>
+        
+</ul>
+<h1 style="color: white;text-align: center; padding: 10px;"> Bienvenido <%=credencial[0]%></h1>
+<h2 style="text-align: center; color: #dde0ee; margin-bottom: 20px;">Tienes acceso a los siguientes lugares de la casa</h2>
+
+<div class="container2">
+   
+    <% for (var i =2; i < credencial.length;  i++ ) { 
+               
+                
+        
+        %>
+        <button class="btn btn-outline-dark border" id="registro" onclick="alert('Has ingresado a ' + '<%=credencial[i]%>'.toLowerCase())">
+        <div class="container" >
+          
+            
+            <h1> <%=credencial[i]%></h1> 
+            
+                  
+                 
+    
+         </div>
+         </button>
+          
+        <% } %>
+      
+    </div>
+    
+    

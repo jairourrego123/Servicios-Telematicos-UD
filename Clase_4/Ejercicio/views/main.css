@@ -1,0 +1,128 @@
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    margin-top: 0;
+    margin-bottom: 1%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    color: white;
+}
+
+
+
+.ingresar{
+    text-align: center; 
+    padding:1%; 
+
+}
+#error{
+    
+    background-color: rgba(211, 12, 12, 0.61);
+   
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+   
+    padding: 10px;
+    margin: 5%;
+}
+
+.ingresar input{
+
+    margin: 5px;
+  
+}
+
+#principal{
+    color: azure;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -150px; /* si el contenedor es de 200 x 200 */
+    
+    background-color: rgba(0,0,0,0.1);
+    
+
+   
+}
+#principal2{
+    color: azure;
+    
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    margin: -50px 0 0 -150px; /* si el contenedor es de 200 x 200 */
+    
+    
+    
+
+   
+}
+
+#principal2 input {
+    margin: 10px;
+    
+    
+    
+    
+
+   
+}
+
+#tiempo{
+    color: white;
+    padding: 10px;
+    background-color: rgba(234, 245, 17, 0.532);
+    text-align: center;
+  
+
+    margin-top: 20%;
+    margin-left: 35%;
+    width: 400px;
+   
+
+}
+#boton{
+    position: absolute;
+    top: 77%;
+    left: 55%;
+    margin: -50px 0 0 -150px; /* si el contenedor es de 200 x 200 */
+    width: 15%;
+    
+}
+#registro{
+    width: 300px;
+    height: 200px;
+    
+ 
+}
+#WindowLoad{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}

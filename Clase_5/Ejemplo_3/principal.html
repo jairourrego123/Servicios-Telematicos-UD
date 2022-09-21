@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/bootstrap.css">
+  <script src="Scripts/funciones.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>CANCHA DE FUTBOL</title>
+</head>
+
+ <body onload="draw();">
+   <table>
+    <tbody>
+      <button type="button"  class="btn btn-danger" onclick="javascript:window.print()">Imprimir</button>
+      <tr>
+        <td>
+          <button id="j1i" class="btn btn-warning" style="background: #EEF911 ;" >A</button>
+        </td>
+        <td>
+          <button id="j1u" class="btn btn-warning"style="background: #EEF911 ;" >W</button><br><br>
+          <button id="j1a" class="btn btn-warning"style="background: #EEF911 ;" >S</button>
+        </td>
+        <td>
+          <button id="j1d" class="btn btn-warning"style="background: #EEF911 ;" >D</button><br>
+        </td>
+        <td> <canvas id="canvas" width="720" height="500"></canvas></td>
+        <td>
+          <button id="j2i" class="btn btn-primary"style="background: #114DF9;" >A</button>
+        </td>
+        <td>
+          <button id="j2u" class="btn btn-primary"style="background: #114DF9;">W</button><br><br>
+          <button id="j2a" class="btn btn-primary"style="background: #114DF9;">S</button>
+        </td>
+        <td>
+          <button id="j2d" class="btn btn-primary"style="background: #114DF9;">D</button><br>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+<div class="video-wrap">
+  <video id="video" style="display:none;" playsinline autoplay></video>
+</div>
+
+<audio id="audioPlay" controls style="display:none;">
+  <source src="audios/gol.mp3"  type="audio/mpeg">
+</audio>
+
+ </body>
+</html>

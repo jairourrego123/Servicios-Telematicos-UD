@@ -1,17 +1,13 @@
 <%- include("rotulo")%>
 
 <div class="container2">
-    <script>
-        function consultar(){
-            var td = document.getElementById("tabProd").rows[0].cells[3]; //Primero seleccionar el <td>
-        }
-    </script>
+   
 <% for (var i =0; i < producto.length;  i++ ) { 
            
             
     
     %>
-    <button class="btn btn-outline-dark border" onclick="consultar()">
+    <button class="btn btn-outline-dark border" onclick="consultar('<%=i%>','<%=producto[i][2]%>')">
     <div class="container" >
       
         
@@ -27,10 +23,6 @@
      </button>
       
     <% } %>
-
+  
 </div>
 
-
-<script>
-    
-    </script>

@@ -72,6 +72,17 @@ app.post('/',(req,res)=>{
     
 });
 
+app.post('/comprar',(req,res)=>{
+
+    producto[req.body.a][2]=[
+
+        req.body.b,
+       ]
+
+    res.render("template/home",{producto:producto})
+    
+});
+
 
 
 

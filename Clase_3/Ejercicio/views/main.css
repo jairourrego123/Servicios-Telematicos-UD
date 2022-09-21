@@ -1,6 +1,6 @@
 
 body{
-   
+    background-color: #111;
     margin-top: 0;
     margin-bottom: 1%;
 }
@@ -49,7 +49,7 @@ li a:hover {
 .container2{
     margin-top: 20px;
     margin-left: 200px;
-    margin-right: 200px;
+    margin-right: 100px;
     padding: 20px;
   
 }
@@ -59,7 +59,7 @@ li a:hover {
     
 }
 
-form{
+form #principal{
     width: 400px;
 	margin: 50px auto;
 	text-align: center;

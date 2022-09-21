@@ -1,0 +1,75 @@
+<%- include("rotulo")%>
+<ul >
+    <li><a href="/">Home</a></li>
+   
+</ul>
+<body>
+    
+    <div id="Fondo">
+  <div style="text-align: center; padding:1%; " class="container-fluid" id="principal">
+    <form action="/" method="post" >
+        <label for="POST-name">Usuario:</label>
+        <input id="usuario" type="text" name="usuario" Required class="form-control">
+        <label for="escripcion">Clave</label>
+        <input id="clave" type="password" name="clave" Required class="form-control">
+       
+        </div>
+        </div>
+        <div style="text-align: center; padding:1%; align-content: center; " class="form-control-file" >
+        <input type="submit" value="Entrar" class="btn btn-outline-success" id="boton" >
+      </div>
+      </form>
+    
+
+
+      <script>
+          time=0
+       
+        if ('<%=intentos%>'> 0 ) {
+            const div=document.createElement("div")
+            div.innerHTML = "<p>ERROR.  CONTRASEÑA O USUARIO INCORRECTO </p>"
+            div.setAttribute("id","error")
+            document.body.appendChild(div)
+        
+            
+            
+        } 
+        
+        if ('<%=intentos%>'== 5) {
+
+            var div=document.createElement("div")
+            div.setAttribute("id","tiempo")
+            tiempo()
+
+            function tiempo(){
+            time++ 
+           
+            div.innerHTML = "Tienes que esperar 30s: "+ time
+            
+            document.body.appendChild(div)
+            
+            const button = document.getElementById('boton')
+            button.disabled = true
+            if (time<30){setTimeout(tiempo, 1000)}
+            
+            else {time = 0; 
+            button.disabled = false
+            div.remove()}
+            }
+
+           
+            
+
+            
+         
+        } 
+       
+
+
+       
+    </script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <script src="Scripts/funciones.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>CANCHA DE FUTBOL</title>
+</head>
+<!-- se ejecuta cuando la pagina acaba de cargarse  -->
+<body onload="draw();">
+    <canvas id="canvas" width="720" height="500"></canvas>
+    <header>
+        
+      </header>
+      <!--Botones para iniciar y parar la grabación-->
+      <p>
+        <button id="btnStart" class="btn btn-primary">INICIAR</button>      
+        <button id="btnStop" class="btn btn-danger">PARAR</button>
+      </p>
+      <!--Los controles permiten subir/bajar el volumen, reproducir, entre otros-->
+      <!--Control de audio para grabar-->
+      <audio controls></audio> 
+      <!--Para reproducir el audio-->
+      <audio id="adioPlay" controls></audio>
+</body>
+</html>
